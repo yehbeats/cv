@@ -1,0 +1,341 @@
+*{padding: 0; margin: 0;}
+body{
+    font:  normal 14px "Helvetica neue", "Segoe UI", Arial, "Microsoft Jhenghei", "Microsoft Yahei", Sans-serif;
+}
+.content-middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    cursor: default;
+}
+.home-content {
+    text-align: center;
+    color: #fff;
+    cursor: default;
+}
+
+.home-content h1{
+    position: relative;
+    display: inline-block;
+    font-size: 80px;
+    margin-bottom: 30px;
+    padding: 10px 5px;
+    text-shadow: 1px 2px #2C3E50,2px 4px #ddd;
+}
+
+.home-content h1:before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: "";
+    margin-left: -50px;
+    width: 100px;
+    border-bottom: 2px solid #fff;
+    transition: all ease .5s;
+}
+
+.home-content h1:after {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    content: "";
+    margin-left: -50px;
+    width: 100px;
+    border-bottom: 2px solid #fff;
+    transition: all ease .5s;
+}
+
+.home-content:hover>h1::before, .home-content:hover>h1::after{
+    margin-left: -110px;
+    width: 220px;
+}
+
+.home-content p.motto {
+    color: #ddd;
+    font-size: 30px;
+}
+
+.home-content p.pos{
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+#home .rect{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -32px;
+    height: 32px;
+    width: 64px;
+    font-size: 0;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    background-color: #000;
+    opacity: .5;
+    vertical-align: bottom;
+}
+
+#home .rect .arrow {
+    position: relative;
+    display: block;
+    height: 13px;
+    width: 22px;
+    margin: 0 auto 0 auto;
+    top: 8px;
+    background: url("../imgs/card.png") no-repeat -114px -2px;
+    font-size: 0;
+    animation: animate-arrow 500ms linear infinite alternate;
+}
+.project-content {
+    color: #fff;
+}
+
+.project-content h1{
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 2px #51BEC4,2px 4px #ddd;
+    font-size: 70px;
+}
+
+.projects{
+    width: 720px;
+    min-width: 400px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.project-content .item {
+    border-left: 5px solid #fff;
+    padding-left: 50px;
+    padding-bottom: 2em;
+    position: relative;
+}
+
+.project-content .item:last-child {
+    padding-bottom: 0;
+}
+
+
+.project-content .target-border {
+    position: absolute;
+    left: -38px;
+    top: -15px;
+    width: 40px;
+    height: 40px;
+    border: 15px solid #51BEC4;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+}
+.project-content .target-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 10;
+    margin: 5px auto;
+    border: 10px solid #51BEC4;
+    background: #fff;
+}
+.titles {
+    position: relative;
+}
+.item-project-name {
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 0;
+}
+.item-personal-title {
+    position: absolute;
+    right: 25px;
+    font-size: 15px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    color: #fff;
+    background-color: #339999;
+    border-radius: 5px;
+}
+.item-date {
+    position: absolute;
+    top: 6px;
+    text-align: right;
+    min-width: 180px;
+    color: #fff;
+    font-size: 20px;
+    transform: translateX(-150%);
+}
+
+.project-des{
+    margin-top: 10px;
+}
+
+.project-des .project-des-detail{
+    display: inline-block;
+    font-size: 15px;
+    text-indent: 2em;
+    text-align: justify;
+}
+.project-my-job {
+    margin-top: 17px;
+    font-size: 15px;
+    padding-left: 1em;
+}
+.project-my-job li{
+    padding: 5px 0;
+    text-align:justify;
+}
+
+.more-projects {
+    font-size: 25px;
+}
+
+.my-zone {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #009999;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.5s linear;
+}
+
+.my-zone:hover {
+    background-color: #fff;
+    color: #009999;
+}
+@media (max-width: 1200px) {
+    .project-content .item-date {
+        transform: translateX(150%);
+    }
+}
+
+@media (max-width: 750px) {
+    #pp-nav span{
+        display: none;
+    }
+    .projects{
+        width: 95%;
+    }
+    .project-content .item-project-name{
+        font-size: 20px;
+    }
+    .project-content .item-date {
+        transform: translateX(100%);
+        font-size: 15px;
+    }
+    .project-content .item {
+        padding-left: 35px;
+    }
+}
+@media (max-width: 600px){
+    .project-content .item-date {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects{
+        width: 100%;
+    }
+    .project-content .item {
+        border: none;
+        padding-left: 0;
+        padding-bottom: 10px;
+    }
+    .project-content .target-border, .project-content .target-dot{
+        display: none;
+    }
+    .project-content .project-my-job{
+        margin-top: 10px;
+    }
+    .project-content .project-my-job li {
+        padding: 3px 0;
+    }
+}
+
+.education-content, .me-content{
+    color: #fff;
+    text-align: center;
+}
+.education-content h1 {
+    text-shadow: 1px 2px #CC9966,2px 4px #ddd;
+    font-size: 70px;
+}
+.education-content h4 {
+    font-size: 25px;
+    margin-top: 20px;
+}
+.education-content p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #FFCC99;
+}
+.education-content h3{
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.me-content h1 {
+    text-shadow: 1px 2px #66CCCC,2px 4px #ddd;
+    font-size: 70px;
+}
+
+.me-content p{
+    font-size: 20px;
+}
+
+.me-content h1, .me-content h2, .me-content p{
+    margin-bottom: 20px;
+}
+
+.fs-30{
+    font-size: 30px;
+}
+.fs-20{
+    font-size: 20px;
+}
+
+.me-content .blog {
+    text-decoration: none;
+    color: #009999;
+    transition: 0.5s;
+}
+.me-content .blog:hover{
+    color: #CCFFFF;
+}
+
+.contact-panel a {
+    display: inline-block;
+    background: url("../imgs/social.png") #339999;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+    text-indent: -9999px;
+    margin: 0 10px 20px 10px;
+    opacity: 0.7;
+    border-radius: 50%;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+}
+
+
+.contact-panel a:hover{
+    opacity: 1;
+}
+
+.contact-panel a.github{
+    background-position: -160px 40px;
+}
+.contact-panel a.weibo{
+    background-position: -160px 0px;
+}
+
+/*向下箭头动画*/
+@keyframes animate-arrow {
+    0% { top: 8px}
+    100% { top: 17px}
+}
+
+
