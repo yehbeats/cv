@@ -79,11 +79,11 @@ body{
 #home .rect .arrow {
     position: relative;
     display: block;
-    height: 13px;
-    width: 22px;
+    height: 15px;
+    width: 35px;
     margin: 0 auto 0 auto;
     top: 8px;
-    background: url("../imgs/card.png") no-repeat -114px -2px;
+    background: url("../imgs/arrow_down.png") no-repeat;
     font-size: 0;
     animation: animate-arrow 500ms linear infinite alternate;
 }
